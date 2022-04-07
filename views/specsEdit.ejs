@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <h1>
+        Edit a specs 
+    </h1>
+    <p>Edit a specs post</p>
+  
+    <form action="/specs" method="post">
+        <label for="manufacturer">Manufacturer:</label><br>
+        <input type="text" id="manufacturer" name="manufacturer" value="<%= specsPost.manufacturer %>"><br>
+        <label for="model">Model:</label><br>
+        <input type="text" id="model" name="model" value="<%= specsPost.model %>"><br>
+        <label for="color">Color:</label><br>
+        <input type="text" id="color" name="color" value="<%= specsPost.color %>"><br><br>
+        <label for="year">Year:</label><br>
+        <input type="integer" id="year" name="year" value="<%= specsPost.year %>"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+
+</body>
+
+</html>
+   
+
+

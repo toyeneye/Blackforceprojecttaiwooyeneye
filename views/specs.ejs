@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+
+    <h1>
+        Specs
+    </h1>
+    <p>Welcome to the Specs Customization Page</p>
+    <p>Create a new  made for you Specs Request</p>
+      <form action="/specs" method="post">
+        <label for="manufacturer">Manufacturer:</label><br>
+        <input type="text" id="manufacturer" name="manufacturer" value=""><br>
+        <label for="model">Model:</label><br>
+        <input type="text" id="model" name="model" value=""><br><br>
+        <label for="color">Color:</label><br>
+        <input type="text" id="color" name="color" value=""><br><br>
+        <label for="year">Year:</label><br>
+        <input type="integer" id="year" name="year" value=""><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <% for(let i=0; i < specsPosts.length; i++) { %>
+        <p>
+            <span>
+                <%- i + 1 %>
+            </span>
+            <%- specsPosts[i].title %> by <%- specsPosts[i].author %> <a
+                        href="/specs/<%= specsPost[i].id%>/delete">Delete</a> <a
+                        href="/specs/<%= specsPost[i].id%>/edit">Edit</a>
+        </p>
+        <% } %>
+
+   
+
+
+</body>
+
+</html>
